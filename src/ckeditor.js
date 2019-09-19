@@ -28,6 +28,9 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 
+// Custom imports
+import Underline from '@ckeditor/ckeditor5-basic-styles/src/underline';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -52,7 +55,8 @@ ClassicEditor.builtinPlugins = [
 	Paragraph,
 	PasteFromOffice,
 	Table,
-	TableToolbar
+	TableToolbar,
+	Underline
 ];
 
 // Editor configuration.
@@ -63,9 +67,10 @@ ClassicEditor.defaultConfig = {
 			'|',
 			'bold',
 			'italic',
+			'underline',
 			'link',
-			'bulletedList',
 			'numberedList',
+			'bulletedList',
 			'imageUpload',
 			'blockQuote',
 			'insertTable',
